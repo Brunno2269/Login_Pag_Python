@@ -1,0 +1,289 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../static/img/plano_de_fundo.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+p {
+    margin-top: 15px;
+    color: #555;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo da mensagem de erro */
+.error-message {
+    display: none; /* Inicialmente oculta */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #ffebee;
+    border: 1px solid #d9534f;
+    border-radius: 5px;
+    padding: 10px;
+    color: #d9534f;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.error-icon {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.error-text {
+    font-weight: bold;
+}
+
+/* Exibe a mensagem de erro */
+.error-message.visible {
+    display: block;
+}
+
+/* Estilo da mensagem de sucesso */
+.success-message {
+    display: none; /* Inicialmente oculta */
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e8f5e9;
+    border: 1px solid #4caf50;
+    border-radius: 5px;
+    padding: 10px;
+    color: #4caf50;
+    font-size: 14px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.success-icon {
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.success-text {
+    font-weight: bold;
+}
+
+/* Estilo para a lista de requisitos da senha */
+#password-requirements {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+}
+
+#password-requirements ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+#password-requirements li {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+}
+
+.check-icon {
+    margin-right: 10px;
+    font-size: 16px;
+    color: #d9534f; /* Vermelho por padrão */
+}
+
+.check-icon.valid {
+    color: #4caf50; /* Verde quando válido */
+}
+
+/* Estilo dos botões de login social */
+.social-login {
+    margin-top: 20px;
+}
+
+.social-btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.social-btn.google {
+    background-color: #db4437; /* Cor do Google */
+}
+
+.social-btn.github {
+    background-color: #333; /* Cor do GitHub */
+}
+
+.social-btn.facebook {
+    background-color: #1877f2; /* Cor do Facebook */
+}
+
+.social-btn:hover {
+    opacity: 0.9;
+}
+
+/* Estilo para a flexbox de exemplo */
+.flexbox-example {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #e9e9e9;
+}
+
+.flexbox-example p {
+    margin: 0;
+    font-style: italic;
+    color: #555;
+}
+
+/* Contêiner flexível para o input e o exemplo */
+.input-with-example {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo do campo de input */
+#recovery-email {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo do exemplo dentro do campo */
+.example-text {
+    position: absolute;
+    left: 10px; /* Posiciona o exemplo no canto esquerdo */
+    color: #999;
+    font-style: italic;
+    pointer-events: none; /* Impede que o exemplo interfira com o input */
+    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+}
+
+/* Classe para esconder o exemplo */
+.example-text.hidden {
+    display: none; /* Oculta completamente o exemplo */
+}
+
+/* Estilo para a página de recuperação de senha */
+#forgot-password-page {
+    display: none; /* Inicialmente oculta */
+}
+
+/* Estilo para o container do campo de senha */
+.password-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+/* Estilo para o campo de senha */
+#password {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Estilo para o botão de mostrar/ocultar senha */
+.toggle-password {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 10px;
+    padding: 5px;
+    position: absolute;
+    left: 260px;
+    width: 24px; /* Define uma largura fixa */
+    height: 24px; /* Define uma altura fixa */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-password:focus {
+    outline: none;
+}

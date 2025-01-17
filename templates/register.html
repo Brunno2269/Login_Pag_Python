@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro</h1>
+        <form id="register-form">
+            <div class="form-group">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Senha:</label>
+                <div class="password-container">
+                    <input type="password" id="password" name="password" required>
+                    <button type="button" id="toggle-password" class="toggle-password">👁️</button>
+                </div>
+                <div id="password-requirements">
+                    <ul>
+                        <li id="req-uppercase"><span class="check-icon">✖</span> Pelo menos uma letra maiúscula (A-Z)</li>
+                        <li id="req-lowercase"><span class="check-icon">✖</span> Pelo menos uma letra minúscula (a-z)</li>
+                        <li id="req-number"><span class="check-icon">✖</span> Pelo menos um número (0-9)</li>
+                        <li id="req-symbol"><span class="check-icon">✖</span> Pelo menos um símbolo (!@#$%^&*, etc.)</li>
+                        <li id="req-length"><span class="check-icon">✖</span> Mínimo de 12 caracteres</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirme a Senha:</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+        <p>Já tem uma conta? <a href="{{ url_for('login') }}">Faça login</a></p>
+        <div id="error-message" class="error-message" style="display: none;">
+            <span class="error-icon">✖</span>
+            <span class="error-text">As senhas não coincidem.</span>
+        </div>
+        <div id="success-message" class="success-message" style="display: none;">
+            <span class="success-icon">✔</span>
+            <span class="success-text">Registrado com sucesso!</span>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

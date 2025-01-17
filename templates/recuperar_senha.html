@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar Senha</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Recuperar Senha</h1>
+        <p>Para recuperar sua senha, digite seu email abaixo:</p>
+        <form id="recover-password-form">
+            <div class="input-with-example">
+                <input type="email" id="recovery-email" name="recovery-email" required>
+                <span class="example-text">Ex: usuarioexemplo@gmail.com</span>
+            </div>
+            <br>
+            <button type="submit">Recuperar Senha</button>
+        </form>
+        <div id="error-email-message" class="error-message" style="display: none;">
+            <table>
+                <tr>
+                    <td class="error-icon">✖</td>
+                    <td class="error-text">O email digitado está incorreto.</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
