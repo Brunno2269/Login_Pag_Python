@@ -75,9 +75,8 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Estilo da mensagem de erro */
 .error-message {
-    display: none; /* Inicialmente oculta */
+    display: none; 
     position: fixed;
     top: 20px;
     right: 20px;
@@ -100,37 +99,39 @@ a:hover {
     font-weight: bold;
 }
 
-/* Exibe a mensagem de erro */
-.error-message.visible {
-    display: block;
-}
-
-/* Estilo da mensagem de sucesso */
-.success-message {
-    display: none; /* Inicialmente oculta */
+.error-message, .success-message {
     position: fixed;
     top: 20px;
     right: 20px;
-    background-color: #e8f5e9;
-    border: 1px solid #4caf50;
-    border-radius: 5px;
     padding: 10px;
-    color: #4caf50;
-    font-size: 14px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none; 
     z-index: 1000;
 }
 
-.success-icon {
-    font-size: 16px;
-    margin-right: 10px;
+.error-message {
+    background-color: #ffebee; 
+    border: 1px solid #d9534f; 
+    color: #d9534f;
 }
 
-.success-text {
+.success-message {
+    background-color: #e8f5e9; 
+    border: 1px solid #4caf50; 
+    color: #4caf50; 
+}
+
+.error-icon, .success-icon {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.error-text, .success-text {
+    font-size: 14px;
     font-weight: bold;
 }
 
-/* Estilo para a lista de requisitos da senha */
 #password-requirements {
     margin-top: 10px;
     font-size: 14px;
@@ -152,14 +153,13 @@ a:hover {
 .check-icon {
     margin-right: 10px;
     font-size: 16px;
-    color: #d9534f; /* Vermelho por padrão */
+    color: #d9534f; 
 }
 
 .check-icon.valid {
-    color: #4caf50; /* Verde quando válido */
+    color: #4caf50; 
 }
 
-/* Estilo dos botões de login social */
 .social-login {
     margin-top: 20px;
 }
@@ -179,22 +179,21 @@ a:hover {
 }
 
 .social-btn.google {
-    background-color: #db4437; /* Cor do Google */
+    background-color: #db4437; 
 }
 
 .social-btn.github {
-    background-color: #333; /* Cor do GitHub */
+    background-color: #333; 
 }
 
 .social-btn.facebook {
-    background-color: #1877f2; /* Cor do Facebook */
+    background-color: #1877f2; 
 }
 
 .social-btn:hover {
     opacity: 0.9;
 }
 
-/* Estilo para a flexbox de exemplo */
 .flexbox-example {
     display: flex;
     align-items: center;
@@ -213,7 +212,6 @@ a:hover {
     color: #555;
 }
 
-/* Contêiner flexível para o input e o exemplo */
 .input-with-example {
     display: flex;
     align-items: center;
@@ -221,7 +219,6 @@ a:hover {
     width: 100%;
 }
 
-/* Estilo do campo de input */
 #recovery-email {
     flex: 1;
     padding: 10px;
@@ -230,27 +227,23 @@ a:hover {
     font-size: 16px;
 }
 
-/* Estilo do exemplo dentro do campo */
 .example-text {
     position: absolute;
-    left: 10px; /* Posiciona o exemplo no canto esquerdo */
+    left: 10px; 
     color: #999;
     font-style: italic;
-    pointer-events: none; /* Impede que o exemplo interfira com o input */
-    transition: opacity 0.3s ease; /* Adiciona uma transição suave */
+    pointer-events: none;
+    transition: opacity 0.3s ease; 
 }
 
-/* Classe para esconder o exemplo */
 .example-text.hidden {
-    display: none; /* Oculta completamente o exemplo */
+    display: none; 
 }
 
-/* Estilo para a página de recuperação de senha */
 #forgot-password-page {
-    display: none; /* Inicialmente oculta */
+    display: none; 
 }
 
-/* Estilo para o container do campo de senha */
 .password-container {
     display: flex;
     align-items: center;
@@ -258,7 +251,6 @@ a:hover {
     width: 100%;
 }
 
-/* Estilo para o campo de senha */
 #password {
     flex: 1;
     padding: 10px;
@@ -267,7 +259,6 @@ a:hover {
     font-size: 16px;
 }
 
-/* Estilo para o botão de mostrar/ocultar senha */
 .toggle-password {
     background: none;
     border: none;
@@ -277,8 +268,8 @@ a:hover {
     padding: 5px;
     position: absolute;
     left: 260px;
-    width: 24px; /* Define uma largura fixa */
-    height: 24px; /* Define uma altura fixa */
+    width: 24px; 
+    height: 24px; 
     display: flex;
     align-items: center;
     justify-content: center;
@@ -286,4 +277,89 @@ a:hover {
 
 .toggle-password:focus {
     outline: none;
+}
+
+#forgot-password-page {
+    display: none; 
+}
+
+.input-with-example {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+
+#recovery-email {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.example-text {
+    position: absolute;
+    left: 10px; 
+    color: #999;
+    font-style: italic;
+    pointer-events: none; 
+    transition: opacity 0.3s ease; 
+}
+
+.example-text.hidden {
+    display: none; 
+}
+
+.message {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: none; 
+    z-index: 1000;
+}
+
+.message.success {
+    background-color: #e8f5e9; 
+    border: 1px solid #4caf50; 
+    color: #4caf50; 
+}
+
+.message.error {
+    background-color: #ffebee; 
+    border: 1px solid #d9534f; 
+    color: #d9534f; 
+}
+
+.message table {
+    width: 100%;
+}
+
+.message .icon {
+    font-size: 20px;
+    padding-right: 10px;
+}
+
+.message .text {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.form-group label[for="remember-me"] {
+    display: flex;
+    align-items: center; 
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    margin-right: 180px; 
+    white-space: nowrap;
+}
+
+.form-group input[type="checkbox"] {
+    cursor: pointer;
+    margin-left: 0;
+    padding-left: 0; 
 }
