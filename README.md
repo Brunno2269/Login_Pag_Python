@@ -1,4 +1,7 @@
 # Sistema de Autenticação
+![Captura de tela de 2025-01-20 11-01-02](https://github.com/user-attachments/assets/ce26f9c2-5978-4b64-a680-cf4be6228bac)
+![Captura de tela de 2025-01-20 11-00-48](https://github.com/user-attachments/assets/cfe95c74-e9ad-45c3-a964-601871a05e57)
+![Captura de tela de 2025-01-20 11-01-14](https://github.com/user-attachments/assets/ad115ded-a699-41b6-bb36-b54a565277c4)
 
 Este projeto é um sistema de autenticação simples que inclui funcionalidades de login, registro e recuperação de senha. Ele foi desenvolvido usando HTML, CSS e JavaScript, com integração ao Flask para o backend.
 
@@ -58,4 +61,4 @@ Este projeto é um sistema de autenticação simples que inclui funcionalidades 
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/sistema-autenticacao.git
+   git clone https://github.com/Brunno2269/Login_Pag_Python.git
